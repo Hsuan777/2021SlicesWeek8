@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Silom Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Silom Bold'), url('./fontFamily/SilomBol.woff') format('woff');
+}
+
+body {
+  color: #707070;
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, ul, p, figure {
   margin-bottom: 0;
   line-height: 1.5;

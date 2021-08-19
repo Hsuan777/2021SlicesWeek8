@@ -1,9 +1,0 @@
-.productList {
-  &__item {
-    padding: 44px 0;
-    @include media-breakpoint-up(md) {
-      padding-top: 80px;
-      padding-bottom: 52px;
-    }
-  }
-}

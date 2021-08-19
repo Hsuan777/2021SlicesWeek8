@@ -9,6 +9,17 @@ body {
   color: #707070;
 }
 
+h1 {
+  width: 96px;
+  height: 31px;
+  background-image: url('../../images/DOYOGA-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, ul, p, figure {
   margin-bottom: 0;
   line-height: 1.5;

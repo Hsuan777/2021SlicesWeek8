@@ -18,6 +18,18 @@ $utilities: map-merge(
         )
       )
     ),
+    "rounded": map-merge(
+      map-get($utilities, "rounded"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "rounded"), "values"), 
+          (
+            4: $border-radius-xl,
+          )
+        )
+      )
+    ),
     "background-color": map-merge(
       map-get($utilities, "background-color"),
       (

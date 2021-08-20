@@ -1,6 +1,9 @@
 .icon {
   object-fit: cover;
   border-radius: 50%;
+  &--reverseX {
+    transform: scaleX(-1);
+  }
 }
 
 @each $name, $value in $icon-sizes {

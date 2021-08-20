@@ -11,7 +11,7 @@
     height: 628px;
   }
   &__space {
-    &__index {
+    &__indexPrimary {
       height: 210px;
       @include media-breakpoint-up(md) {
         height: 266px;
@@ -19,6 +19,16 @@
       @include media-breakpoint-up(lg) {
         height: 444px;
       }
+    }
+    &__indexSecondary {
+      height: 210px;
+      @include media-breakpoint-up(md) {
+        height: 117px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 207px;
+      }
+
     }
   }
   &__course {

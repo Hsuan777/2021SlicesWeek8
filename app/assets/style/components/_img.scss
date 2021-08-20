@@ -1,15 +1,24 @@
 .img { 
   object-fit: cover;
   width: 100%;
-  &__index {
-    &__section1 {
-      height: 420px;
-      @include media-breakpoint-only(md){
-        height: 252px;
-      }
+  &__advantage {
+    height: 420px;
+    @include media-breakpoint-only(md){
+      height: 252px;
     }
-    &__section2 {
-      height: 628px;
+  }
+  &__teacher {
+    height: 628px;
+  }
+  &__space {
+    &__index {
+      height: 210px;
+      @include media-breakpoint-up(md){
+        height: 266px;
+      }
+      @include media-breakpoint-up(lg){
+        height: 444px;
+      }
     }
   }
 }

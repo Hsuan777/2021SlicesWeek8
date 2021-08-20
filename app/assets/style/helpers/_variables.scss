@@ -268,11 +268,13 @@ $spacers: (
   13: $spacer * 3.25,  // 52
   14: $spacer * 3.5,   // 56
   15: $spacer * 3.75,  // 60
+  16: $spacer * 4,     // 64
   18: $spacer * 4.5,   // 72
   20: $spacer * 5,     // 80
   24: $spacer * 5.5,   // 88
   26: $spacer * 6.5,   // 104
   275: $spacer * 6.875,// 110
+  43: $spacer * 10.75,   // 172
 );
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -1506,3 +1508,13 @@ $kbd-color:                         $white !default;
 $kbd-bg:                            $gray-900 !default;
 
 $pre-color:                         null !default;
+
+$icon-sizes: (
+  "medium":   1.5rem, // 24
+  "large":    2rem,   // 32
+  "larger":   2.5rem, // 40
+  "x-large":  3rem,   // 48
+  "xx-large": 3.75rem,// 60
+  "huge":     4.25rem,// 68
+  "huger":    6rem,   // 96
+)

@@ -3,7 +3,7 @@
   width: 100%;
   &__advantage {
     height: 420px;
-    @include media-breakpoint-only(md){
+    @include media-breakpoint-only(md) {
       height: 252px;
     }
   }
@@ -13,11 +13,39 @@
   &__space {
     &__index {
       height: 210px;
-      @include media-breakpoint-up(md){
+      @include media-breakpoint-up(md) {
         height: 266px;
       }
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         height: 444px;
+      }
+    }
+  }
+  &__course {
+    &__index {
+      height: 165px;
+      @include media-breakpoint-up(md) {
+        height: 150px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 445px;
+      }
+    }
+  }
+  &__scheme {
+    &__index {
+      height: 248.5px;
+      border-radius: 1rem 1rem 0 0;
+      margin-top: -0.5px;
+      @include media-breakpoint-up(md) {
+        height: 238px;
+        border-radius: 1rem 0 0 1rem;
+        margin-top: 0;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 248.5px;
+        border-radius: 1rem 1rem 0 0;
+        margin-top: -0.5px;
       }
     }
   }

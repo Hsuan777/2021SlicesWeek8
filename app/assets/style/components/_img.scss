@@ -11,6 +11,10 @@
     height: 628px;
   }
   &__space {
+    height: 350px;
+    @include media-breakpoint-only(md) {
+      height: 216px;
+    }
     &__indexPrimary {
       height: 210px;
       @include media-breakpoint-up(md) {
@@ -30,6 +34,12 @@
       }
 
     }
+    &__recommend {
+      height: 196px;
+      @include media-breakpoint-only(md) {
+        height: 161px;
+      }
+    }
   }
   &__course {
     &__index {
@@ -47,15 +57,10 @@
       height: 248.5px;
       border-radius: 1rem 1rem 0 0;
       margin-top: -0.5px;
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-only(md) {
         height: 238px;
         border-radius: 1rem 0 0 1rem;
         margin-top: 0;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 248.5px;
-        border-radius: 1rem 1rem 0 0;
-        margin-top: -0.5px;
       }
     }
   }

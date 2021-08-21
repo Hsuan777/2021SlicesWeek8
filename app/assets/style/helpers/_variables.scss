@@ -74,7 +74,7 @@ $info:          #707070 !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         #F5F0E7;
-$dark:          $gray-900 !default;
+$dark:          $gray-900 !default;         
 $white:         #fff;
 // scss-docs-end theme-color-variables
 
@@ -738,7 +738,7 @@ $input-bg:                              $white !default;
 $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
-$input-color:                           $body-color !default;
+$input-color:                           $primary; // $body-color !default;
 $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
@@ -753,7 +753,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color:               $secondary; //$gray-600 !default;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
@@ -1517,4 +1517,12 @@ $icon-sizes: (
   "xx-large": 3.75rem,// 60
   "huge":     4.25rem,// 68
   "huger":    6rem,   // 96
-)
+);
+
+$opacity-values: (
+  0: 0,
+  25: .25,
+  50: .5,
+  75: .75,
+  100: 1,
+);

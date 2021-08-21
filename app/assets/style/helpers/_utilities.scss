@@ -6,6 +6,10 @@ $utilities: map-merge(
       responsive: true,
       values: $font-sizes,
     ),
+    "opacity": (
+      property: opacity,
+      values: $opacity-values,
+    ),
     "font-weight": map-merge(
       map-get($utilities, "font-weight"),
       (

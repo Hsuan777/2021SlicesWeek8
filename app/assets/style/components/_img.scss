@@ -59,4 +59,13 @@
       }
     }
   }
+  &__map {
+    height: 195px;
+    @include media-breakpoint-up(md) {
+      height: 323px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 360px;
+    }
+  }
 }

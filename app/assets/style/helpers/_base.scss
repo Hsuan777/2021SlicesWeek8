@@ -6,7 +6,7 @@
 }
 
 body {
-  color: #707070;
+  color: map-get($theme-colors, "primary");
   overflow-x: hidden;
 }
 

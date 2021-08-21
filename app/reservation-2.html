@@ -1,23 +1,25 @@
 ---
-title: 立即預約
+title: 填寫資料
 layout: ./app/layout.ejs
 engine: ejs
-current: reservation
+current: reservation-2
 ---
 
 <div class="container pt-12 pt-md-16 pb-22 pb-md-20 pb-lg-26">
   <!-- 立即預約 -->
   <section class="mb-10 mb-md-12 mb-lg-4">
     <h2 class="text-primary fw-normal fz-x-large text-center mb-6 mb-md-4">立即預約</h2>
-    <div class="d-flex justify-content-center mb-8 mb-md-6 mb-lg-8">
-      <input type="button" value="選擇方案" class="btn btn-light rounded-4 text-primary px-3 px-lg-12">
-      <input type="button" value="填寫資料" class="btn btn-primary rounded-4 text-white px-3 px-lg-12 mx-4 mx-md-75">
-      <input type="button" value="完成預約" class="btn btn-light rounded-4 text-primary px-3 px-lg-12">
+    <div class="row justify-content-center mb-8">
+      <div class="col-md-6 col-lg-5 d-flex justify-content-between mx-auto">
+        <input type="button" value="選擇方案" class="btn btn-light rounded-4 text-primary px-3 px-lg-6 px-xl-10">
+        <input type="button" value="填寫資料" class="btn btn-primary rounded-4 text-white px-3 px-lg-6 px-xl-10">
+        <input type="button" value="完成預約" class="btn btn-light rounded-4 text-primary px-3 px-lg-6 px-xl-10">
+      </div>
     </div>
     <p class="text-center mb-6 mb-lg-8">
       <span class="me-4">您選擇的是</span>
       <span class="fz-large text-secondary">首次體驗課程-基礎</span>
-     </p>
+    </p>
     <div class="row">
       <div class="col-md-4 mx-auto">
         <form action="">
@@ -95,7 +97,7 @@ current: reservation
             <!-- 4. 上課預約報到日 -->
             <li class="mb-8">
               <h3 class="mb-4 fw-normal fz-medium">4. 上課預約報到日</h3>
-              <p class="mb-2">若還沒有確定的日期，可以等待專員與您聯絡時再做詳細的諮詢哦！</p>
+              <p class="fz-small mb-2">若還沒有確定的日期，可以等待專員與您聯絡時再做詳細的諮詢哦！</p>
               <input type="button" value="MM/DD/YYYY" class="btn btn-outline-primary">
             </li>
             <!-- 5. 填寫基本資料，完成預約後會寄送通知至電子信箱 -->
@@ -129,7 +131,7 @@ current: reservation
             </li>
             <!-- 送出完成後跳轉至"完成預約" -->
             <li>
-              <a href="reservation-3.html" class="btn btn-secondary fz-large text-white d-block w-100">送出</a>
+              <a href="reservation-done.html" class="btn btn-secondary fz-large text-white d-block w-100">送出</a>
             </li>
           </ul>
         </form>

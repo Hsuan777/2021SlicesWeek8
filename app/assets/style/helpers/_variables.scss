@@ -271,6 +271,7 @@ $spacers: (
   16: $spacer * 4,     // 64
   18: $spacer * 4.5,   // 72
   20: $spacer * 5,     // 80
+  21: $spacer * 5.25,  // 84
   22: $spacer * 5.5,   // 88
   24: $spacer * 6,     // 96
   26: $spacer * 6.5,   // 104
@@ -309,7 +310,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                $primary; // $gray-900 !default;
 $body-text-align:           null !default;
 
 
@@ -588,7 +589,8 @@ $table-striped-bg:            rgba($black, $table-striped-bg-factor) !default;
 
 $table-active-color:          $table-color !default;
 $table-active-bg-factor:      .1 !default;
-$table-active-bg:             rgba($black, $table-active-bg-factor) !default;
+// $table-active-bg:             rgba($black, $table-active-bg-factor) !default;
+$table-active-bg:             $light;
 
 $table-hover-color:           $table-color !default;
 $table-hover-bg-factor:       .075 !default;

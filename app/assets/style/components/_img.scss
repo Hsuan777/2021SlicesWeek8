@@ -42,6 +42,13 @@
     }
   }
   &__course {
+    height: 196px;
+    &__primary {
+      height: 218px;
+      @include media-breakpoint-up(md) {
+        height: 341px;
+      }
+    }
     &__index {
       height: 165px;
       @include media-breakpoint-up(md) {

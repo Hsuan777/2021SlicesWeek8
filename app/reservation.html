@@ -5,9 +5,9 @@ engine: ejs
 current: reservation
 ---
 
-<div class="container pt-12 pt-md-16 pb-22 pb-md-20 pb-lg-26">
+<div id="app" class="pt-12 pt-md-16 pb-22 pb-md-20 pb-lg-26">
   <!-- 立即預約 -->
-  <section class="mb-10 mb-md-12 mb-lg-4">
+  <section class="container mb-10 mb-md-12 mb-lg-4">
     <h2 class="text-primary fz-x-large text-center mb-6 mb-md-4">立即預約</h2>
     <div class="row justify-content-center mb-8">
       <div class="col-md-6 col-lg-5 d-flex justify-content-between mx-auto">
@@ -16,9 +16,9 @@ current: reservation
         <p class="bg-light rounded-4 text-primary py-3 px-3 px-lg-6 px-xl-10 d-flex align-items-center">完成預約</p>
       </div>
     </div>
-    <ul class="list-unstyled row">
+    <ul class="swiper list-unstyled row flex-nowrap">
       <li class="col-lg-4">
-        <div class="card rounded-4 border-secondary border-2">
+        <div class="card rounded-4 border-secondary" :class="select === schemes.first ? 'border-2' : ''">
           <div class="row g-0">
             <div class="col-md-6 col-lg-12">
               <img
@@ -30,15 +30,17 @@ current: reservation
                 <h3 class="fz-large mb-1 text-center">首次體驗</h3>
                 <p class="text-secondary mb-2 text-center">NT $450 / 次</p>
                 <p class="mb-10 mb-md-6 mb-lg-10">分基礎、中級、高級可以選擇。初次至 DOYOGA 上課建議選擇此方案。</p>
-                <a type="button" class="btn btn-secondary d-block w-100 stretched-link">選擇課程</a>
+                <a type="button" class="btn btn-secondary d-block w-100 stretched-link"
+                  @click="select = 'firstScheme'">選擇課程</a>
               </div>
             </div>
           </div>
         </div>
-        <span class="material-icons-outlined fz-huger d-block text-center my-4">arrow_drop_down</span>
+        <span class="material-icons-outlined fz-huger d-block text-center my-4"
+          v-if="select === schemes.first">arrow_drop_down</span>
       </li>
-      <li class="col-lg-4 my-4 my-lg-0">
-        <div class="card rounded-4 border-secondary">
+      <li class="col-lg-4">
+        <div class="card rounded-4 border-secondary" :class="select === schemes.short ? 'border-2' : ''">
           <div class="row g-0">
             <div class="col-md-6 col-lg-12">
               <img
@@ -50,14 +52,17 @@ current: reservation
                 <h3 class="fz-large mb-1 text-center">短期體驗</h3>
                 <p class="text-secondary mb-2 text-center">NT $1800 / 月</p>
                 <p class="mb-10 mb-md-6 mb-lg-10">分基礎、中級、高級可以選擇。想試著培養瑜珈習慣者可以選擇此方案。</p>
-                <a type="button" class="btn btn-secondary d-block w-100 stretched-link">選擇課程</a>
+                <a type="button" class="btn btn-secondary d-block w-100 stretched-link"
+                  @click="select = 'shortScheme'">選擇課程</a>
               </div>
             </div>
           </div>
         </div>
+        <span class="material-icons-outlined fz-huger d-block text-center my-4"
+          v-if="select === schemes.short">arrow_drop_down</span>
       </li>
       <li class="col-lg-4">
-        <div class="card rounded-4 border-secondary">
+        <div class="card rounded-4 border-secondary" :class="select === schemes.long ? 'border-2' : ''">
           <div class="row g-0">
             <div class="col-md-6 col-lg-12">
               <img
@@ -69,23 +74,30 @@ current: reservation
                 <h3 class="fz-large mb-1 text-center">長期體驗</h3>
                 <p class="text-secondary mb-2 text-center">NT $5600 / 月</p>
                 <p class="mb-10 mb-md-6 mb-lg-10">分基礎、中級、高級可以選擇。有長期習慣做瑜伽者建議選擇此方案。</p>
-                <a type="button" class="btn btn-secondary d-block w-100 stretched-link">選擇課程</a>
+                <a type="button" class="btn btn-secondary d-block w-100 stretched-link"
+                  @click="select = 'longScheme'">選擇課程</a>
               </div>
             </div>
           </div>
         </div>
+        <span class="material-icons-outlined fz-huger d-block text-center my-4"
+          v-if="select === schemes.long">arrow_drop_down</span>
       </li>
     </ul>
+  </section>
 
+  <div v-if="select">
     <!-- 選擇課程階級 -->
-    <div class="bg-primary pt-10 pb-16 mb-10">
+    <div class="container-fluid container-lg bg-primary pt-10 pb-16 mb-10">
       <h2 class="text-white fz-x-large text-center mb-6 mb-md-8">選擇課程階級</h2>
-      <ul class="list-unstyled row px-5 px-lg-10 text-white">
-        <li class="col-xl-4">
-          <div class="p-6 border border-white border-3 rounded-4 bg-secondary">
+      <ul class="swiper list-unstyled row flex-md-nowrap px-5 px-lg-10 text-white">
+        <li class="col-md-6 col-xl-4">
+          <div class="p-6 border border-white rounded-4 bg-secondary"
+            :class="selectLevel === level.basic ? 'border-3' : ''" @click="selectLevel = 'basic'">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="fw-medium">基礎 Basic</h3>
-              <span class="material-icons-outlined fz-huger">check_circle</span>
+              <span class="material-icons-outlined fz-huger"
+                :class="selectLevel !== level.basic ? 'opacity-50' : ''">check_circle</span>
             </div>
             <div class="d-flex align-items-center mb-4">
               <p class="me-2">基礎課程</p>
@@ -98,11 +110,13 @@ current: reservation
             </ul>
           </div>
         </li>
-        <li class="col-xl-4 py-4 py-xl-0">
-          <div class="p-6 rounded-4 bg-secondary">
+        <li class="col-md-6 col-xl-4 py-4 py-md-0">
+          <div class="p-6 border border-white rounded-4 bg-secondary"
+            :class="selectLevel === level.intermediate ? 'border-3' : ''" @click="selectLevel = 'intermediate'">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="fw-medium">中階 Intermediate</h3>
-              <span class="material-icons-outlined fz-huger opacity-50">check_circle</span>
+              <span class="material-icons-outlined fz-huger"
+                :class="selectLevel !== level.intermediate ? 'opacity-50' : ''">check_circle</span>
             </div>
             <div class="d-flex align-items-center mb-4">
               <p class="me-2">艾揚格、哈達、寰宇</p>
@@ -115,11 +129,13 @@ current: reservation
             </ul>
           </div>
         </li>
-        <li class="col-xl-4">
-          <div class="p-6 rounded-4 bg-secondary">
+        <li class="col-md-6 col-xl-4">
+          <div class="p-6 border border-white rounded-4 bg-secondary"
+            :class="selectLevel === level.advanced ? 'border-3' : ''" @click="selectLevel = 'advanced'">
             <div class="d-flex justify-content-between align-items-center">
               <h3 class="fw-medium">高階 Advanced</h3>
-              <span class="material-icons-outlined fz-huger opacity-50">check_circle</span>
+              <span class="material-icons-outlined fz-huger"
+                :class="selectLevel !== level.advanced ? 'opacity-50' : ''">check_circle</span>
             </div>
             <div class="d-flex align-items-center mb-4">
               <p class="me-2">阿斯坦加、陰陽</p>
@@ -136,12 +152,12 @@ current: reservation
     </div>
     <div class="text-center mb-10">
       <p class="mb-1">您選擇的是</p>
-      <p class="text-decoration-underline fz-large">首次體驗課程-基礎</p>
+      <p class="text-decoration-underline fz-large">首次體驗課程-{{selectLevelName}}</p>
     </div>
-  </section>
+  </div>
 
   <!-- 預約須知 -->
-  <section>
+  <section class="container">
     <h2 class="fz-x-large text-center mb-6 mb-md-4">預約須知</h2>
     <div class="row">
       <div class="col-md-6 mx-auto">
@@ -160,3 +176,40 @@ current: reservation
     </div>
   </section>
 </div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        select: "",
+        selectLevel: "basic",
+        schemes: {
+          first: "firstScheme",
+          short: "shortScheme",
+          long: "longScheme"
+        },
+        level: {
+          basic: "basic",
+          intermediate: "intermediate",
+          advanced: "advanced",
+        }
+      }
+    },
+    computed: {
+      selectLevelName() {
+        switch (this.selectLevel) {
+          case "basic":
+            return "基礎";
+            break;
+          case "intermediate":
+            return "中階";
+            break;
+          case "advanced":
+            return "高階";
+            break;
+        }
+      }
+    }
+  })
+  app.mount('#app')
+</script>

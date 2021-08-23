@@ -58,6 +58,14 @@
         height: 445px;
       }
     }
+    &__detail {
+      width: 165px;
+      height: 165px;
+      @include media-breakpoint-up(md) {
+        width: 100%;
+        height: 418px;
+      }
+    }
   }
   &__scheme {
     &__index {

@@ -1,5 +1,0 @@
-@each $name, $value in $btn-colors {
-  .btn-#{$name} {
-    color: $value;
-  }
-}

@@ -1,10 +1,49 @@
----
-title: DOYOGA
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
-<!-- banner -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOYOGA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-5">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1>
+          <a href="index.html" class="d-block">DOYOGA</a>
+        </h1>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav justify-content-between w-100">
+            <li class="nav-item me-18 d-none d-lg-block">
+              <a class="nav-link py-2" href="#"></a>
+            </li>
+            <li class="nav-item d-flex flex-column align-items-center flex-lg-row">
+              <a class="nav-link p-2 me-lg-8" href="course.html">課程介紹</a>
+              <a class="nav-link p-2 me-lg-8" href="surroundings.html">瑜珈空間</a>
+              <a class="nav-link p-2" href="curriculum.html">當月課表</a>
+            </li>
+            <li class="nav-item d-flex flex-column align-items-center flex-lg-row mb-4 mb-lg-0">
+              <a class="nav-link p-2 border border-primary text-primary rounded-4 me-lg-4 my-2 my-lg-0" href="reservation.html">立即預約</a>
+              <a class="nav-link p-2 border border-primary text-primary rounded-4 mt-2 mt-lg-0" href="contact.html">聯絡我們</a>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <!-- banner -->
 <figure class="banner banner__index d-flex align-items-center">
   <div class="container">
     <div class="row text-info">
@@ -365,3 +404,89 @@ current: index
     </div>
   </div>
 </section>
+
+    </main>
+    <footer class="bg-primary">
+      <div class="container-fluid border-bottom border-white">
+        <div class="container">
+          <div class="row justify-content-between align-items-center py-6 py-lg-8">
+            <div class="col-lg-8">
+              <h2 class="text-white fw-medium fz-larger fz-md-x-large">現在訂閱，獲得課程優惠碼！</h2>
+            </div>
+            <div class="col-lg-4">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="輸入您的電子信箱">
+                <input type="button" class="btn btn-secondary" value="訂閱">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-between text-white py-8">
+          <div class="col-4 order-1">
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <div class="h1">
+                  <a href="index.html" class="d-block">DOYOGA</a>
+                </div>
+              </li>
+              <li class="mb-2 fw-light">
+                <a href="course.html" class="text-white">課程介紹</a>
+              </li>
+              <li class="mb-2 fw-light">
+                <a href="surroundings.html" class="text-white">瑜珈空間</a>
+              </li>
+              <li class="fw-light mb-2 mb-md-0">
+                <a href="curriculum.html" class="text-white">當月課表</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 order-3 order-md-2 d-flex justify-content-md-center align-items-end">
+            <p>© 2021. All Rights Reserved.</p>
+          </div>
+          <div class="col-4 order-2 order-md-3">
+            <ul class="list-unstyled d-flex justify-content-end">
+              <li>
+                <a href="https://www.facebook.com/" class="text-white fz-larger">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="https://www.instagram.com/" class="text-white fz-larger">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://line.me/zh-hant/" class="text-white fz-larger">
+                  <i class="fab fa-line"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <ul class="list-unstyled d-flex flex-column align-items-center position-fixed top-50 end-5">
+      <li>
+        <a href="https://www.facebook.com/" class="text-primary fz-x-large">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/" class="text-primary fz-x-large">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://line.me/zh-hant/" class="text-primary fz-x-large">
+          <i class="fab fa-line"></i>
+        </a>
+      </li>
+    </ul>
+
+    
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>

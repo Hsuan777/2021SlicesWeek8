@@ -1529,3 +1529,9 @@ $opacity-values: (
   75: .75,
   100: 1,
 );
+
+$btn-colors: (
+  "primary": $white,
+  "secondary": $white,
+  "light": $primary,
+);

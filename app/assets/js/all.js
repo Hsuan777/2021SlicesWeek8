@@ -5,6 +5,7 @@ $(function () {
 var swiper = new Swiper(".teachersSwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
+  autoHeight: true,
   breakpoints: {
     576: {
       slidesPerView: 1,

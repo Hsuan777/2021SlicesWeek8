@@ -23401,7 +23401,7 @@ body {
 h1, .h1 {
   width: 96px;
   height: 31px;
-  background-image: url("assets/images/DOYOGA-logo.png");
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/DOYOGA-logo.png?raw=true");
   background-repeat: no-repeat;
   background-size: contain;
   text-indent: 101%;
@@ -23410,7 +23410,7 @@ h1, .h1 {
 }
 
 .h1 {
-  background-image: url("assets/images/DOYOGA.png");
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/DOYOGA.png?raw=true");
 }
 
 h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6, ul, p, figure {

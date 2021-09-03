@@ -23,12 +23,3 @@ const swiper = new Swiper(".teachersSwiper", {
     },
   },
 });
-
-const elem = document.querySelector('input[name="datepicker"]');
-const datepicker = new Datepicker(elem, {
-  autohide: false,
-  prevArrow: "<span class='material-icons-outlined text-primary'>keyboard_arrow_left</span>",
-  nextArrow: "<span class='material-icons-outlined text-primary'>keyboard_arrow_right</span>",
-  
-
-}); 

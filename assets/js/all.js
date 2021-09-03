@@ -20,10 +20,4 @@ var swiper = new Swiper(".teachersSwiper", {
     }
   }
 });
-var elem = document.querySelector('input[name="datepicker"]');
-var datepicker = new Datepicker(elem, {
-  autohide: false,
-  prevArrow: "<span class='material-icons-outlined text-primary'>keyboard_arrow_left</span>",
-  nextArrow: "<span class='material-icons-outlined text-primary'>keyboard_arrow_right</span>"
-});
 //# sourceMappingURL=all.js.map

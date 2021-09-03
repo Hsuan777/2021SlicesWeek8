@@ -41,12 +41,14 @@
         </button>
       </div>
     </nav>
+
     <main>
       
 <div class="container pt-12 pt-md-16 pb-22 pb-md-20 pb-lg-26">
   <!-- 立即預約 -->
   <section class="mb-10 mb-md-12 mb-lg-4">
     <h2 class="text-primary fw-normal fz-x-large text-center mb-6 mb-md-4">立即預約</h2>
+    <!-- 流程 -->
     <div class="row justify-content-center mb-8">
       <div class="col-md-6 col-lg-5 d-flex justify-content-between mx-auto">
         <p class="bg-light rounded-4 text-primary py-3 px-3 px-lg-6 px-xl-10 d-flex align-items-center">選擇方案</p>
@@ -58,6 +60,7 @@
       <span class="me-4">您選擇的是</span>
       <span class="fz-large text-secondary">首次體驗課程-基礎</span>
     </p>
+    <!-- 表單 -->
     <div class="row">
       <div class="col-md-6 col-lg-4 mx-auto">
         <form action="">
@@ -136,7 +139,6 @@
             <li class="mb-8">
               <h3 class="mb-4 fw-normal fz-medium">4. 上課預約報到日</h3>
               <p class="fz-small mb-2">若還沒有確定的日期，可以等待專員與您聯絡時再做詳細的諮詢哦！</p>
-              <!-- <input type="button" value="MM/DD/YYYY" class="btn btn-outline-primary"> -->
               <input type="text" placeholder="MM/DD/YYYY" name="datepicker" class="form-control border-secondary w-md-50">
             </li>
             <!-- 5. 填寫基本資料，完成預約後會寄送通知至電子信箱 -->
@@ -178,7 +180,18 @@
     </div>
   </section>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+<script>
+  const elem = document.querySelector('input[name="datepicker"]');
+  const datepicker = new Datepicker(elem, {
+    autohide: false,
+    prevArrow: "<span class='material-icons-outlined text-primary'>keyboard_arrow_left</span>",
+    nextArrow: "<span class='material-icons-outlined text-primary'>keyboard_arrow_right</span>",
+  }); 
+</script>
     </main>
+
     <footer class="bg-primary">
       <div class="container-fluid border-bottom border-white">
         <div class="container">
@@ -240,6 +253,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- fixed icon list -->
     <ul class="list-unstyled d-flex flex-column align-items-center position-fixed top-50 end-5">
       <li>
         <a href="https://www.facebook.com/" class="text-primary fz-x-large">
@@ -258,10 +273,8 @@
       </li>
     </ul>
 
-    
     <script src="./assets/js/vendors.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
 </html>

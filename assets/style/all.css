@@ -23814,4 +23814,16 @@ td {
   }
 }
 
+.button.view-switch {
+  color: #907A7B;
+}
+
+.datepicker-cell.selected, .datepicker-cell.selected:hover {
+  background-color: #907A7B;
+}
+
+.datepicker-cell.day.next {
+  color: #C0A4A5;
+}
+
 /*# sourceMappingURL=all.css.map */

@@ -1,91 +1,17 @@
 .img { 
   object-fit: cover;
   width: 100%;
-  &__advantage {
-    height: 420px;
-    @include media-breakpoint-only(md) {
-      height: 252px;
+  &__card {
+    &-top {
+      border-radius: 1rem 1rem 0 0;  
     }
-  }
-  &__teacher {
-    height: 628px;
-  }
-  &__space {
-    height: 350px;
-    @include media-breakpoint-only(md) {
-      height: 216px;
-    }
-    &__indexPrimary {
-      height: 210px;
-      @include media-breakpoint-up(md) {
-        height: 266px;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 444px;
-      }
-    }
-    &__indexSecondary {
-      height: 210px;
-      @include media-breakpoint-up(md) {
-        height: 117px;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 207px;
-      }
-
-    }
-    &__recommend {
-      height: 196px;
-      @include media-breakpoint-only(md) {
-        height: 161px;
+    &-start {
+      &--only-md {
+        @include media-breakpoint-only(md) {
+          border-radius: 1rem 0 0 1rem;
+        }
       }
     }
   }
-  &__course {
-    height: 196px;
-    &__primary {
-      height: 218px;
-      @include media-breakpoint-up(md) {
-        height: 341px;
-      }
-    }
-    &__index {
-      height: 165px;
-      @include media-breakpoint-up(md) {
-        height: 150px;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 445px;
-      }
-    }
-    &__detail {
-      width: 165px;
-      height: 165px;
-      @include media-breakpoint-up(md) {
-        width: 100%;
-        height: 418px;
-      }
-    }
-  }
-  &__scheme {
-    &__index {
-      height: 248.5px;
-      border-radius: 1rem 1rem 0 0;
-      margin-top: -0.5px;
-      @include media-breakpoint-only(md) {
-        height: 238px;
-        border-radius: 1rem 0 0 1rem;
-        margin-top: 0;
-      }
-    }
-  }
-  &__map {
-    height: 195px;
-    @include media-breakpoint-up(md) {
-      height: 323px;
-    }
-    @include media-breakpoint-up(lg) {
-      height: 360px;
-    }
-  }
+  
 }

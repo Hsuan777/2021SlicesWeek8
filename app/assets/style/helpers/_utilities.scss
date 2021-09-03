@@ -6,6 +6,12 @@ $utilities: map-merge(
       responsive: true,
       values: $font-sizes,
     ),
+    "magic-height": (
+      property: height,
+      class: magic-height,
+      responsive: true,
+      values: $magic-heights,
+    ),
     "opacity": (
       property: opacity,
       values: $opacity-values,

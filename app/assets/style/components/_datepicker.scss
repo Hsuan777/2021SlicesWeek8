@@ -1,0 +1,11 @@
+.button.view-switch {
+  color: map-get($theme-colors, "primary");
+}
+
+.datepicker-cell.selected, .datepicker-cell.selected:hover {
+  background-color: map-get($theme-colors, "primary");
+}
+
+.datepicker-cell.day.next {
+  color:  map-get($theme-colors, "secondary");
+}
